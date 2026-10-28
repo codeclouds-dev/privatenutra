@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 112 112">
+  <g fill="none" stroke="#205a43">
+    <rect x="8" y="8" width="96" height="96" rx="22" stroke-width="1.5"/>
+    <path d="M20 36h72M20 76h72" stroke-opacity=".25"/>
+  </g>
+  <g fill="#205a43" text-anchor="middle" font-family="Arial,Helvetica,sans-serif">
+    <text x="56" y="28" font-size="9" letter-spacing="1.2">FACILITY</text>
+    <text x="56" y="65" font-size="30" font-weight="700" letter-spacing="1">FDA</text>
+    <text x="56" y="93" font-size="9" font-weight="700" letter-spacing=".8">REGISTERED</text>
+  </g>
+</svg>

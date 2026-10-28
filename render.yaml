@@ -1,0 +1,21 @@
+# BON-2596: manual-deploy preview; creating the service starts its first deploy.
+services:
+  - type: web
+    name: private-label-nutra-preview
+    runtime: node
+    plan: starter
+    region: virginia
+    branch: main
+    autoDeployTrigger: 'off'
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm build
+    startCommand: pnpm start:host
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: '22.23.1'
+      - key: NEXT_TELEMETRY_DISABLED
+        value: '1'
+      - key: SITE_INDEXABLE
+        value: 'false'
+      - key: SITE_URL
+        value: https://www.privatelabelnutra.com
