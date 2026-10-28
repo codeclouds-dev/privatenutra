@@ -1,13 +1,23 @@
+
 import type { NextConfig } from 'next';
 import { indexingEnabled } from './src/lib/deployment';
+
 const config: NextConfig = {
-  reactStrictMode: true, poweredByHeader: false, agentRules: false,
+  output: 'export',
+
+  reactStrictMode: true,
+  poweredByHeader: false,
+
   async redirects() {
-    // The PDF requests 301 explicitly (Next's permanent:true would emit 308).
-    return [{ source: '/services', destination: '/#services', statusCode: 301 }];
+    // The PDF requests 301 explicitly.
+    // Static export does not support Next.js redirects.
+    return [];
   },
+
   async headers() {
-    return indexingEnabled ? [] : [{ source: '/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] }];
+    // Static export does not support Next.js headers.
+    return [];
   },
 };
+
 export default config;
