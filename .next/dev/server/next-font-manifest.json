@@ -1,0 +1,10 @@
+{
+  "app": {
+    "[project]/src/app/page": [
+      "static/media/InstrumentSans_VF_latin-s.p.15vyqs1guhv5-.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}
